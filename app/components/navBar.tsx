@@ -1,6 +1,6 @@
 "use client";
 
-import { BaggageClaim, User, Home, UserRoundPlus } from "lucide-react";
+import { UserRoundPlus } from "lucide-react";
 
 import Link from "next/link";
 import Icon from "./Icon";
@@ -18,7 +18,7 @@ export const NavBar = () => {
           <Link href={"/ajouter-contact"}>
             <li className="font-bold flex  items-center gap-1.5">
               <Icon icon={UserRoundPlus} size={18} />
-              Ajouter 
+              Ajouter
             </li>
           </Link>
           <li></li>

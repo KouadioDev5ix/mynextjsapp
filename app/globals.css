@@ -5,6 +5,10 @@
   font-family: var(--font-inter);
 }
 
+.mainBg {
+  background-color: #025864;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

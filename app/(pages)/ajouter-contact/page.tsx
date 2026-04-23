@@ -4,6 +4,7 @@ export default function addContactForms() {
       action="
     
     "
+      className="pt-28"
     >
       <p>C'esst la page d'ajout de contact</p>
     </form>

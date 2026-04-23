@@ -2,10 +2,10 @@
 
 export default function Home() {
   return (
-    <section className="pt-12">
-      <div>
+    <section className="pt-28">
+      {/* <div>
         <h1>C'est la page home</h1>
-      </div>
+      </div> */}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta est ex veritatis libero ut odio repudiandae expedita ratione, eius quidem harum ipsum obcaecati quo minima voluptatibus impedit eaque minus dolor.
         Eius ea maiores at, quibusdam temporibus nisi autem, quasi quidem deleniti beatae vitae. Sed eum reprehenderit dolorum dolor assumenda earum quod delectus provident, doloribus illo commodi? Eos molestiae est similique.

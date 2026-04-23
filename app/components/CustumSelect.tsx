@@ -9,7 +9,7 @@ type CustumSelectProps<T> = {
   options: T[];
   valueKey: keyof T;
   labelKey: keyof T;
-  onChange: (item: T) => React.ReactNode;
+  // onChange: (item: T) => React.ReactNode;
   placeHoder: string;
   getKey: (item: T) => number | string;
   selectClassName?: string;
@@ -24,7 +24,7 @@ export default function CustumSelect<T>({
   id,
   label,
   labelKey,
-  onChange,
+
   options,
   placeHoder,
   valueKey,
@@ -33,15 +33,15 @@ export default function CustumSelect<T>({
    *
    * @param e
    */
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedValue = e.target.value;
+  // const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  //   const selectedValue = e.target.value;
 
-    const selectedOption = options.find(
-      (item) => String(item[valueKey]) === selectedValue,
-    );
+  //   const selectedOption = options.find(
+  //     (item) => String(item[valueKey]) === selectedValue,
+  //   );
 
-    if (selectedOption) onChange(selectedOption);
-  };
+  //   if (selectedOption) onChange(selectedOption);
+  // };
 
   return (
     <div>
@@ -53,7 +53,7 @@ export default function CustumSelect<T>({
       </label>
       <select
         id={id}
-        onChange={handleChange}
+        // onChange={handleChange}
         className={cn(
           "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none rounded-lg px-3 py-2",
           selectClassName,

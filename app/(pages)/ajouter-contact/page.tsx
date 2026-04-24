@@ -1,11 +1,18 @@
 "use client";
 
+import CustumInputs from "@/components/CustumInputs";
+import CustumSelect from "@/components/CustumSelect";
 import { IPrestataireFormData } from "@/interfaces/prestataires";
 import { prestataireSchema } from "@/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 
 export default function AddContactForms() {
+  const genreOptions = [
+    { id: "Homme", label: "Homme" },
+    { id: "Femme", label: "Femme" },
+    { id: "Non précisé", label: "Non précisé" },
+  ];
   const {
     register,
     control,
@@ -23,9 +30,61 @@ export default function AddContactForms() {
       </div>
 
       <section className="max-w-3xl mx-auto px-5 border bg-white border-gray-200 shadow-xs rounded-xl h-[800px] pb-10">
-        <form action="" className="">
-          <div></div>
+        <form action="" className="p-2 w-full">
+          {/* Identite */}
+          <div className="flex items-center gap-4">
+            <div className="w-full">
+              <Controller
+                name="nom"
+                control={control}
+                render={({ field }) => (
+                  <CustumInputs
+                    inputType="text"
+                    label="Nom"
+                    placeHolder="Exemple: Kouadio"
+                    id="nom"
+                    labelClassName="text-stone-700 font-medium text-sm"
+                    htmlFor="nom"
+                    {...field}
+                  />
+                )}
+              />
+            </div>
 
+            <div className="w-full">
+              <Controller
+                name="prenoms"
+                control={control}
+                render={({ field }) => (
+                  <CustumInputs
+                    inputType="text"
+                    label="Prenoms"
+                    placeHolder="Exemple: Kouadio Alfred"
+                    id="prenoms"
+                    labelClassName="text-stone-700 font-medium text-sm"
+                    htmlFor="prenoms"
+                    {...field}
+                  />
+                )}
+              />
+            </div>
+          </div>
+          <Controller
+            name="genre"
+            control={control}
+            render={({ field }) => (
+              <CustumSelect
+                options={genreOptions}
+                label="Genre"
+                labelKey="label"
+                valueKey="id"
+                // hidden={}
+                placeHoder="Veuillez selectionner votre genre"
+                value={field.value}
+                onChange={field.onChange}
+              />
+            )}
+          />
           <div className="">
             <div>{/* <p>C'esst la page d'ajout de contact</p> */}</div>
           </div>

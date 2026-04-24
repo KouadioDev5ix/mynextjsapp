@@ -4,17 +4,17 @@ import { cn } from "@/utils";
 
 type CustumSelectProps<T> = {
   htmlFor?: string;
-  id: string;
+  id?: string;
   label?: string;
   options: T[];
   valueKey: keyof T;
   labelKey: keyof T;
   // onChange: (item: T) => React.ReactNode;
   placeHoder: string;
-  getKey: (item: T) => number | string;
+  getKey?: (item: T) => number | string;
   selectClassName?: string;
   labelClassName?: string;
-};
+} & React.InputHTMLAttributes<HTMLInputElement>;
 
 export default function CustumSelect<T>({
   labelClassName,
@@ -59,7 +59,7 @@ export default function CustumSelect<T>({
           selectClassName,
         )}
       >
-        <option value="" disabled>
+        <option value="" disabled selected>
           {placeHoder ? placeHoder : "Selectionner une valeur"}
         </option>
 

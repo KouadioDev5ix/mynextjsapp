@@ -15,7 +15,7 @@ type CustumSelectProps<T> = {
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
-function CustumSelect<T>({
+export  function CustumSelect<T>({
   labelClassName,
   selectClassName,
   getKey,

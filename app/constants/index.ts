@@ -21,3 +21,12 @@ const paysOptions = [
   { id: "Mali", label: "Mali" },
   { id: "Autre", label: "Autre" },
 ];
+
+const indicatiifOptions = [
+  { id: "+225", label: "🇨🇮 +225" },
+  { id: "+33", label: "🇫🇷 +33" },
+  { id: "+221", label: "🇸🇳 +221" },
+  { id: "+226", label: "🇧🇫 +226" },
+  { id: "+1", label: "🇺🇸 +1" },
+  { id: "+44", label: "🇬🇧 +44" },
+];

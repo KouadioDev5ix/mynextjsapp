@@ -1,4 +1,4 @@
- const genreOptions = [
+const genreOptions = [
   { id: "Homme", label: "Homme" },
   { id: "Femme", label: "Femme" },
   { id: "Non précisé", label: "Non précisé" },
@@ -31,4 +31,4 @@ const indicatiifOptions = [
   { id: "+44", label: "🇬🇧 +44" },
 ];
 
-export {indicatiifOptions , paysOptions , nationaliteOptions}
+export { indicatiifOptions, paysOptions, nationaliteOptions, genreOptions };

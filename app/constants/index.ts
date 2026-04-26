@@ -4,7 +4,7 @@ export const genreOptions = [
   { id: "Non précisé", label: "Non précisé" },
 ];
 
-export const nationaliteOptions = [
+const nationaliteOptions = [
   { id: "Ivoirienne", label: "Ivoirienne" },
   { id: "Française", label: "Française" },
   { id: "Sénégalaise", label: "Sénégalaise" },
@@ -31,4 +31,4 @@ const indicatiifOptions = [
   { id: "+44", label: "🇬🇧 +44" },
 ];
 
-export {indicatiifOptions , paysOptions}
+export {indicatiifOptions , paysOptions , nationaliteOptions}

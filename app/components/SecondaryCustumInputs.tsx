@@ -1,3 +1,5 @@
+import { cn } from "@/utils";
+
 type CustumSelectProps<T> = {
   htmlFor?: string;
   id?: string;

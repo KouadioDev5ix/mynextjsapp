@@ -31,4 +31,4 @@ const indicatiifOptions = [
   { id: "+44", label: "🇬🇧 +44" },
 ];
 
-export {}
+export {indicatiifOptions , }

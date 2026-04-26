@@ -29,20 +29,6 @@ export default function CustumSelect<T>({
   placeHoder,
   valueKey,
 }: CustumSelectProps<T>) {
-  /**
-   *
-   * @param e
-   */
-  // const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  //   const selectedValue = e.target.value;
-
-  //   const selectedOption = options.find(
-  //     (item) => String(item[valueKey]) === selectedValue,
-  //   );
-
-  //   if (selectedOption) onChange(selectedOption);
-  // };
-
   return (
     <div>
       <label

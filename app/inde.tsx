@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller, Watch } from "react-hook-form";
 import { cn } from "@/utils";
 
 // ─── Interface ───────────────────────────────────────────────────────────────
@@ -290,7 +290,7 @@ export default function PrestataireForm() {
   const [indicatif, setIndicatif] = useState("+225");
   const [indicatifSec, setIndicatifSec] = useState("+225");
 
-  const nom = watch("nom");
+  const nom = Watch("nom");
   const prenoms = watch("prenoms");
   const email = watch("email");
 

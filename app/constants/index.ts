@@ -3,3 +3,8 @@ export const genreOptions = [
   { id: "Femme", label: "Femme" },
   { id: "Non précisé", label: "Non précisé" },
 ];
+
+
+export const nationaliteOptions =[
+  
+]

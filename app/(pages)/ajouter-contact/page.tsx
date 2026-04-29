@@ -32,7 +32,7 @@ export default function AddContactForms() {
       <section className="max-w-3xl mx-auto px-5 border bg-white border-gray-200 shadow-xs rounded-xl h-[800px] pb-10">
         <form action="" className="p-2 w-full">
           {/* Identite */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ">
             <div className="w-full">
               <Controller
                 name="nom"
@@ -69,22 +69,26 @@ export default function AddContactForms() {
               />
             </div>
           </div>
-          <Controller
-            name="genre"
-            control={control}
-            render={({ field }) => (
-              <CustumSelect
-                options={genreOptions}
-                label="Genre"
-                labelKey="label"
-                valueKey="id"
-                // hidden={}
-                placeHoder="Veuillez selectionner votre genre"
-                value={field.value}
-                onChange={field.onChange}
-              />
-            )}
-          />
+
+          <div className="my-5">
+            <Controller
+              name="genre"
+              control={control}
+              render={({ field }) => (
+                <CustumSelect
+                  defaultValue={"Homme"}
+                  options={genreOptions}
+                  label="Genre"
+                  labelKey="label"
+                  valueKey="id"
+                  // hidden={}
+                  placeHoder="Veuillez selectionner votre genre"
+                  value={field.value}
+                  onChange={field.onChange}
+                />
+              )}
+            />
+          </div>
           <div className="">
             <div>{/* <p>C'esst la page d'ajout de contact</p> */}</div>
           </div>

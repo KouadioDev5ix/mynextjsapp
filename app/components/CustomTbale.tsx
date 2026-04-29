@@ -23,5 +23,25 @@ interface CustomTableProps<T> {
   filterPlaceholder?: string;
   searchPlaceholder?: string;
   getRowKey: (row: T) => number | string;
-  itemsPerPage?:number
+  itemsPerPage?: number;
+}
+
+export function CustomTble<T extends Record<string, any>>({
+  data,
+  colums,
+  getRowKey,
+  actions,
+  filterKeys,
+  filterLabel,
+  filterPlaceholder,
+  itemsPerPage,
+  searchKeys,
+  searchPlaceholder,
+}: CustomTableProps<T>) {
+
+  return (
+    <div>
+      
+    </div>
+  )
 }

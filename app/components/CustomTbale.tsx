@@ -1,3 +1,5 @@
+import React from "react";
+
 interface TableHearder<T> {
   key: keyof T;
   header: string;
@@ -26,22 +28,31 @@ interface CustomTableProps<T> {
   itemsPerPage?: number;
 }
 
-export function CustomTble<T extends Record<string, any>>({
+export function CustomTable<T extends Record<string, any>>({
   data,
   colums,
   getRowKey,
   actions,
   filterKeys,
-  filterLabel,
+  filterLabel = "Filtrer par catégorie",
   filterPlaceholder,
-  itemsPerPage,
+  itemsPerPage = 5,
   searchKeys,
-  searchPlaceholder,
+  searchPlaceholder = "Rechercher...",
 }: CustomTableProps<T>) {
+  const [search, setSearch] = React.useState<string>("");
+  const [filter, setFiler] = React.useState<string>("");
+  const [page, setPage] = React.useState<number>(1);
+
+  const categories = React.useMemo(() => {
+
+
+    
+  }, []);
 
   return (
-    <div>
-      
-    </div>
-  )
+    <section>
+      <div></div>
+    </section>
+  );
 }

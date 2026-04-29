@@ -16,4 +16,12 @@ interface CustomTableProps<T> {
   data: T[];
   colums: TableHearder<T>[];
   actions?: Action<T>[];
+  searchKeys?: (keyof T)[];
+
+  filterKeys?: keyof T;
+  filterLabel?: string;
+  filterPlaceholder?: string;
+  searchPlaceholder?: string;
+  getRowKey: (row: T) => number | string;
+  itemsPerPage?:number
 }

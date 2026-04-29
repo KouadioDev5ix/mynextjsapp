@@ -5,5 +5,9 @@ interface TableHearder<T> {
 
   renderCell: (value: any, row: T) => React.ReactNode;
 }
-
-
+interface Action<T> {
+  icon: React.ReactNode;
+  funct: (row: T) => void;
+  varriant?: "Default" | "Danger";
+  title: string;
+}

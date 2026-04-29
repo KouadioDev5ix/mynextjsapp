@@ -1,6 +1,5 @@
 import React from "react";
 
-
 interface TableHearder<T> {
   key: keyof T;
   header: string;
@@ -19,7 +18,6 @@ interface CustomTableProps<T> {
   colums: TableHearder<T>[];
   actions?: Action<T>[];
   searchKeys?: (keyof T)[];
-
   filterKeys?: keyof T;
   filterLabel?: string;
   filterPlaceholder?: string;
@@ -50,7 +48,7 @@ export function CustomTable<T extends Record<string, any>>({
     return [...new Set(data.map((row) => String(row[filterKeys])))];
   }, [data, filterKeys]);
 
-  
+  const filer = React.useMemo(() => {}, []);
 
   return (
     <section>

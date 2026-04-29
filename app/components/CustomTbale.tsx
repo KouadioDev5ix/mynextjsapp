@@ -11,3 +11,11 @@ interface Action<T> {
   varriant?: "Default" | "Danger";
   title: string;
 }
+
+interface CustomTableProps <T>{
+  data:T[],
+
+}
+
+
+

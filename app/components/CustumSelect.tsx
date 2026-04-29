@@ -31,12 +31,14 @@ export default function CustumSelect<T>({
 }: CustumSelectProps<T>) {
   return (
     <div>
-      <label
-        htmlFor={htmlFor}
-        className={cn("font-medium text-gray-600", labelClassName)}
-      >
-        {label}
-      </label>
+      <div>
+        <label
+          htmlFor={htmlFor}
+          className={cn("font-medium text-gray-600", labelClassName)}
+        >
+          {label}
+        </label>
+      </div>
       <select
         id={id}
         // onChange={handleChange}

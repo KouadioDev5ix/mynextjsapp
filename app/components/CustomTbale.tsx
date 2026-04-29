@@ -1,10 +1,10 @@
 import React from "react";
+import { set } from "zod";
 
 interface TableHearder<T> {
   key: keyof T;
   header: string;
   hearderClassName?: string;
-
   renderCell: (value: any, row: T) => React.ReactNode;
 }
 interface Action<T> {
@@ -45,10 +45,12 @@ export function CustomTable<T extends Record<string, any>>({
   const [page, setPage] = React.useState<number>(1);
 
   const categories = React.useMemo(() => {
+    if (!filterKeys) return [];
 
+    return [...new Set(data.map((row) => String(row[filterKeys])))];
+  }, [data, filterKeys]);
 
-    
-  }, []);
+  
 
   return (
     <section>

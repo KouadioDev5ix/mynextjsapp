@@ -12,10 +12,8 @@ interface Action<T> {
   title: string;
 }
 
-interface CustomTableProps <T>{
-  data:T[],
-
+interface CustomTableProps<T> {
+  data: T[];
+  colums: TableHearder<T>[];
+  actions?: Action<T>[];
 }
-
-
-

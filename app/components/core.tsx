@@ -63,6 +63,7 @@ export function SmartTable<T extends Record<string, any>>({
         );
       const matchFilter =
         !filter || (filterKey && String(row[filterKey]) === filter);
+
       return matchSearch && matchFilter;
     });
   }, [data, search, filter, searchKeys, filterKey]);

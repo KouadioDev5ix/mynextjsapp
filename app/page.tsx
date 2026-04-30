@@ -1,6 +1,5 @@
 export default function Home() {
-  
-
+  const map = new Map<number, string[]>([[1, ["Hello"]]]);
   // const
   return (
     <section className="pt-28">

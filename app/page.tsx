@@ -1,11 +1,13 @@
 export default function Home() {
+  const test = new Map<number, string[]>(1);
 
-
-  // const 
+  // const
   return (
     <section className="pt-28">
       <div>
-        <h1 className="text-xl text-gray-700 font-bold">Liste des prestataires</h1>
+        <h1 className="text-xl text-gray-700 font-bold">
+          Liste des prestataires
+        </h1>
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta est ex

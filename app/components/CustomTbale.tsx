@@ -6,6 +6,7 @@ interface TableHearder<T> {
   hearderClassName?: string;
   renderCell: (value: any, row: T) => React.ReactNode;
 }
+
 interface Action<T> {
   icon: React.ReactNode;
   funct: (row: T) => void;
@@ -50,14 +51,18 @@ export function CustomTable<T extends Record<string, any>>({
 
   const fileredData = React.useMemo(() => {
     return data.filter((row) => {
-
-      
       const matchSearch =
         !search || searchKeys?.some((key) => String(row[key]));
     });
 
+    const matchFilter = "";
+
+    
 
 
+    
+
+    // La prob
   }, [data, searchKeys, search]);
 
   return (

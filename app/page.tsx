@@ -1,5 +1,14 @@
 export default function Home() {
   const map = new Map<number, string[]>([[1, ["Hello"]]]);
+
+  const renderWord = (word) => {
+    const labels = {
+      pending: "En attente ",
+      deleivered: "Livre ",
+    };
+
+    return labels[word];
+  };
   // const
   return (
     <section className="pt-28">

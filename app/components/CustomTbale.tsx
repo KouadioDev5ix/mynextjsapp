@@ -49,12 +49,16 @@ export function CustomTable<T extends Record<string, any>>({
   }, [data, filterKeys]);
 
   const fileredData = React.useMemo(() => {
-return data.filter((row)=>{
-  const matchSearch = !search ||
-   searchKeys?.some((key)=>String()) 
-})
+    return data.filter((row) => {
 
-  }, []);
+      
+      const matchSearch =
+        !search || searchKeys?.some((key) => String(row[key]));
+    });
+
+
+
+  }, [data, searchKeys, search]);
 
   return (
     <section>

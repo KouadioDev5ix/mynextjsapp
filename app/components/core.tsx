@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import { Search, Filter } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
-// ── Types ──────────────────────────────────────────────────────
+// ── Types ────────
 export interface Column<T> {
   key: keyof T;
   header: string;
@@ -47,13 +47,13 @@ export function SmartTable<T extends Record<string, any>>({
   const [filter, setFilter] = useState("");
   const [page, setPage] = useState(1);
 
-  // ── Catégories uniques pour le select ────────────────────────
+  // ── Catégories uniques pour le select ────
   const categories = useMemo(() => {
     if (!filterKey) return [];
     return [...new Set(data.map((row) => String(row[filterKey])))];
   }, [data, filterKey]);
 
-  // ── Filtrage + recherche ─────────────────────────────────────
+  // ── Filtrage + recherche ─────────────
   const filtered = useMemo(() => {
     return data.filter((row) => {
       const matchSearch =

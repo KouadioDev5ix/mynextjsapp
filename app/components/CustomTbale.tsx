@@ -1,4 +1,5 @@
 import React from "react";
+import { keyof } from "zod";
 
 interface TableHearder<T> {
   key: keyof T;
@@ -27,6 +28,12 @@ interface CustomTableProps<T> {
   itemsPerPage?: number;
 }
 
+const user = [
+  {
+    id: 25,
+  },
+];
+
 export function CustomTable<T extends Record<string, any>>({
   data,
   colums,
@@ -54,14 +61,7 @@ export function CustomTable<T extends Record<string, any>>({
       const matchSearch =
         !search || searchKeys?.some((key) => String(row[key]));
     });
-
     const matchFilter = "";
-
-    
-
-
-    
-
     // La prob
   }, [data, searchKeys, search]);
 
